@@ -15,10 +15,10 @@ In this repository, we demonstrate our approach through a digit recognition exam
 To get the drive-by bridge health monitoring dataset, please send an email to [Jingxiao Liu](mailto:liujx@stanford.edu).
 
 # Code Usage
-'''
+```
 git clone https://github.com/jingxiaoliu/multi-task-UDA.git
 cd multi-task-UDA
-'''
+```
 
 Run the digit recognition example with 'demo.ipynb'.
 
