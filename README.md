@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # multi-task-UDA
 
 This is the repository for the paper:
@@ -28,7 +27,3 @@ Feel free to send any questions to:
 
 ### Citation
 If you use this implementation, please cite our paper as follows:
-
-=======
-# multi-task UDA
->>>>>>> 6af05586ea663eb63c03b99af6067da1864a761b
