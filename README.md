@@ -13,8 +13,8 @@ We introduce a novel approach for multi-task unsupervised domain adaptation. Thi
 
 In this repository, we demonstrate our approach through two examples:
 
-- A digit recognition example, which transfers model learned using MNIST data to MNIST-M data and conducts two tasks: odd-even classification and digits comparison.
 - A drive-by bridge health monitoring example, which transfers model learned using vehicle vibration data collected from one bridge to detect, localize and quantify damage on another bridge.
+- A digit recognition example, which transfers model learned using MNIST data to MNIST-M data and conducts two tasks: odd-even classification and digits comparison.
 
 Note: the drive-by bridge health monitoring experiment involves data that is not publicly available. We will work towards making the experiment replicable without violating data usage policy.
 
@@ -24,8 +24,9 @@ git clone https://github.com/jingxiaoliu/multi-task-UDA.git
 cd multi-task-UDA
 ```
 
-Run the digit recognition example with 'demo_mnist.ipynb'.
 Run the drive-by bridge health monitoring example with 'demo_dbbhm.ipynb'.
+
+Run the digit recognition example with 'demo_mnist.ipynb'.
 
 ### Contact
 Feel free to send any questions to:
