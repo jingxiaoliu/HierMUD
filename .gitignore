@@ -1,6 +1,6 @@
 # MacOS
 .DS_Store
-Icon
+Icon\r\r
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
