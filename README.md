@@ -11,12 +11,12 @@ We introduce a novel approach for multi-task unsupervised domain adaptation. Thi
 
 ![The architecture of our hierarchical multi-task and domain-adversarial learning algorithm. The red and black arrows between blocks represent source and target domain data stream, respectively. Orange blocks are feature extractors, blue blocks are task predictors, and red blocks are domain classifiers.](imgs/arch.png)
 
-In this repository, we demonstrate our approach through a digit recognition example, which transfers model learned using MNIST data to MNIST-M data and conducts two tasks: odd-even classification and digits comparison.
+In this repository, we demonstrate our approach through two examples:
 
-For the drive-by bridge health monitoring application, the implementation is similar.
+> A digit recognition example, which transfers model learned using MNIST data to MNIST-M data and conducts two tasks: odd-even classification and digits comparison.
+> A drive-by bridge health monitoring example, which transfers model learned using vehicle vibration data collected from one bridge to detect, localize and quantify damage on another bridge.
 
-Note: the drive-by bridge health monitoring experiment involves data that are not publicly available. 
-To get this dataset, please send an email to [Jingxiao Liu](mailto:liujx@stanford.edu).
+Note: the drive-by bridge health monitoring experiment involves data that is not publicly available. We will work towards making the experiment replicable without violating data usage policy.
 
 ### Code Usage
 ```
@@ -25,6 +25,7 @@ cd multi-task-UDA
 ```
 
 Run the digit recognition example with 'demo_mnist.ipynb'.
+Run the drive-by bridge health monitoring example with 'demo_dbbhm.ipynb'.
 
 ### Contact
 Feel free to send any questions to:
