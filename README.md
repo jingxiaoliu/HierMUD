@@ -2,7 +2,7 @@
 
 This is the repository for the paper:
 
->* Jingxiao Liu
+>* TODO
 
 [[slides]](docs/slides.pdf)[[paper]]()[[video]](docs/video.mp4) 
 
@@ -34,3 +34,8 @@ Feel free to send any questions to:
 
 ### Citation
 If you use this implementation, please cite our paper as follows:
+
+```
+@article{
+}
+```
