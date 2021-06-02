@@ -36,6 +36,6 @@ Feel free to send any questions to:
 If you use this implementation, please cite our paper as follows:
 
 ```
-@article{
+@article{TODO
 }
 ```
