@@ -1,6 +1,5 @@
 import numpy as np
 import torch
-import os
 from tqdm import tqdm_notebook as tqdm
 import argparse
 from torch.autograd import Variable
@@ -81,60 +80,6 @@ def evaluate(model_instance,input_loader):
     model_instance.set_train(ori_train_state)
     return accuracy.cpu().detach().numpy(),all_probs.cpu().detach().numpy(),accuracy_2,all_probs_2,accuracy_.cpu().detach().numpy()
 
-def get_bottleneck(model_instance, input_loader):
-    ori_train_state = model_instance.is_train
-    model_instance.set_train(False)
-    num_iter = len(input_loader)
-    iter_test = iter(input_loader)
-    first_test = True
-
-    for i in range(num_iter):
-        data = iter_test.next()
-        inputs = data[0]           
-        lab_tmp = data[1].clone()
-        lab_tmp = torch.where(torch.remainder(data[1],2).byte(),lab_tmp,(data[1]/2).long())
-        lab_tmp = torch.where(torch.remainder(data[1]+1,2).byte(),lab_tmp,((data[1]-1)/2).long())
-        labels = lab_tmp
-        labels_2 = torch.remainder(data[1],2)
-        if model_instance.use_gpu:
-            inputs = Variable(inputs.cuda())
-            labels = Variable(labels.cuda())
-            labels_2 = Variable(labels_2.cuda())
-        else:
-            inputs = Variable(inputs)
-            labels = Variable(labels)
-            labels_2 = Variable(labels_2)
-        features, _,_,_ = model_instance.embedding(inputs)
-
-        feature1 = features[0].data.float()
-        feature2 = features[1].data.float()
-        if len(features)==3:
-          feature3 = features[2].data.float()
-        labels = labels.data.float()
-        labels_2 = labels_2.data.float()
-        if first_test:
-            all_feas1 = feature1
-            all_feas2 = feature2
-            if len(features)==3:
-              all_feas3 = features3
-            else:
-              all_fea3 = None
-            all_labels = labels
-            all_labels_2 = labels_2
-            first_test = False
-        else:
-            all_feas1 = torch.cat((all_feas1, feature1), 0)
-            all_feas2 = torch.cat((all_feas2, feature2), 0)
-            if len(features)==3:
-              all_feas3 = torch.cat((all_feas3, feature3), 0)
-            all_labels = torch.cat((all_labels, labels), 0)
-            all_labels_2 = torch.cat((all_labels_2, labels_2), 0)
-
-    model_instance.set_train(ori_train_state)
-    return all_feas1.cpu().detach().numpy(),all_feas2.cpu().detach().numpy(),\
-        all_feas3.cup().detach().numpy(),\
-        all_labels.cpu().detach().numpy(),all_labels_2.cpu().detach().numpy()
-
 def train(model_instance, train_source_loader, train_target_loader, test_target_loader,
           group_ratios, max_iter, optimizer, lr_scheduler, eval_interval):
     model_instance.set_train(True)
@@ -214,7 +159,7 @@ def train(model_instance, train_source_loader, train_target_loader, test_target_
                   print({'Tgt accuracy':eval_result_tgt})
                   if eval_result_tgt_2 is not None:
                       print({'Tgt accuracy 2':eval_result_tgt_2})
-                      print({'Tgt accuracy 2 from 1':eval_acc_t})
+                      # print({'Tgt accuracy 2 from 1':eval_acc_t})
                 eval_result_src,all_probs_src,eval_result_src_2,all_probs_src_2,eval_acc_s = evaluate(model_instance, train_source_loader[0])
                 if iter_num % 2000 == 1:
                   print({'Src accuracy':eval_result_src})

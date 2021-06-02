@@ -145,9 +145,9 @@ class SHMD(object):
         transfer_loss2 = class_criterion(torch.cat((outputs_adv_s[1],outputs_adv_t[1]),0), domain_labels)
         transfer_loss3 = class_criterion(torch.cat((outputs_adv_s[2],outputs_adv_t[2]),0), domain_labels)
 
-        transfer_losses = torch.vstack((transfer_loss1,transfer_loss2,transfer_loss3))
+        transfer_losses = torch.vstack((transfer_loss1,transfer_loss2))
         transfer_loss = torch.mul(torch.div(torch.log(torch.sum(torch.exp(torch.mul(transfer_losses,\
-                self.gamma)))),self.gamma),self.weight)
+                    self.gamma)))),self.gamma),self.weight)+transfer_loss3
 
         self.iter_num += 1
 
