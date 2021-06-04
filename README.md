@@ -1,4 +1,4 @@
-# multi-task-UDA
+# MUD: a Multi-task Unsupervised Domain adaptation framework
 
 This is the repository for the paper:
 
