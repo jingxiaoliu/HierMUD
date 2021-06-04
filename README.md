@@ -20,7 +20,7 @@ Note: the drive-by bridge health monitoring experiment involves data that is not
 
 ### Code Usage
 ```
-git clone https://github.com/jingxiaoliu/HMUD.git
+git clone https://github.com/jingxiaoliu/MUD.git
 cd multi-task-UDA
 ```
 
