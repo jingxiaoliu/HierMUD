@@ -16,9 +16,9 @@ class GradientReverseLayer(torch.autograd.Function):
         coeff = ctx.coeff
         return coeff * grad_output.neg(), None
 
-class HMD(nn.Module):
+class MUD_net(nn.Module):
     def __init__(self, base_net_sha='mynet1', width=256, class_num=13):
-        super(HMD, self).__init__()
+        super(MUD_net, self).__init__()
         ## set base network
         self.class_num = class_num
         self.task_num = len(class_num)
@@ -101,11 +101,11 @@ class HMD(nn.Module):
 
         return shared_fea, outputs, softmax_outputs, outputs_advs
          
-class SHMD(object):
+class MUD(object):
     def __init__(self, base_net_sha='mynet1', width=1024, class_num=31, \
         use_gpu=True,max_iter=1000.0,alpha=1.,low_value=0.,high_value=0.5,\
         gamma=10., weight=2.):
-        self.c_net = HMD(base_net_sha, width, class_num)
+        self.c_net = MUD_net(base_net_sha, width, class_num)
 
         self.use_gpu = use_gpu
         self.is_train = False
