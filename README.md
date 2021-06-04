@@ -24,9 +24,8 @@ git clone https://github.com/jingxiaoliu/MUD.git
 cd multi-task-UDA
 ```
 
-Run the drive-by bridge health monitoring example with 'demo_dbbhm.ipynb'.
-
-Run the digit recognition example with 'demo_mnist.ipynb'.
+- Run the drive-by bridge health monitoring example with 'demo_dbbhm.ipynb'.
+- Run the digit recognition example with 'demo_mnist.ipynb'.
 
 ### Contact
 Feel free to send any questions to:
