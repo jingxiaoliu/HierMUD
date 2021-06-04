@@ -7,7 +7,7 @@ This is the repository for the paper:
 [[slides]](docs/slides.pdf)[[paper]]()[[video]](docs/video.mp4) 
 
 ### Description
-We introduce a novel approach for multi-task unsupervised domain adaptation. This approach is developed for bridge health monitoring using drive-by vehicle vibrations, but it can be applied to other problems, such as digit recognition, image classification, etc.
+We introduce HMUD, a novel approach for multi-task unsupervised domain adaptation. This approach is developed for bridge health monitoring using drive-by vehicle vibrations, but it can be applied to other problems, such as digit recognition, image classification, etc.
 
 ![The architecture of our hierarchical multi-task and domain-adversarial learning algorithm. The red and black arrows between blocks represent source and target domain data stream, respectively. Orange blocks are feature extractors, blue blocks are task predictors, and red blocks are domain classifiers.](imgs/arch.png)
 
@@ -20,7 +20,7 @@ Note: the drive-by bridge health monitoring experiment involves data that is not
 
 ### Code Usage
 ```
-git clone https://github.com/jingxiaoliu/multi-task-UDA.git
+git clone https://github.com/jingxiaoliu/HMUD.git
 cd multi-task-UDA
 ```
 
