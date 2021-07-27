@@ -2,7 +2,7 @@
 
 This is the repository for the paper:
 
->* HierMUD: Hierarchical Multi-task Unsupervised Domain Adaptation between Bridges for Drive-by Damage Diagnosis
+>* HierMUD: Hierarchical Multi-task Unsupervised Domain Adaptation between Bridges for Drive-by Damage Diagnosis,
 Jingxiao Liu, Susu Xu, Mario Bergés, Hae Young Noh
 
 [[slides]](docs/slides.pdf)[[paper]](https://arxiv.org/abs/2107.11435)[[video]](docs/video.mp4) 
