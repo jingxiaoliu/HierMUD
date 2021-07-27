@@ -2,9 +2,10 @@
 
 This is the repository for the paper:
 
->* TODO
+>* HierMUD: Hierarchical Multi-task Unsupervised Domain Adaptation between Bridges for Drive-by Damage Diagnosis
+Jingxiao Liu, Susu Xu, Mario Bergés, Hae Young Noh
 
-[[slides]](docs/slides.pdf)[[paper]]()[[video]](docs/video.mp4) 
+[[slides]](docs/slides.pdf)[[paper]](https://arxiv.org/abs/2107.11435)[[video]](docs/video.mp4) 
 
 ### Description
 We introduce HierMUD, a novel approach for multi-task unsupervised domain adaptation. This approach is developed for bridge health monitoring using drive-by vehicle vibrations, but it can be applied to other problems, such as digit recognition, image classification, etc.
@@ -40,6 +41,12 @@ Feel free to send any questions to:
 If you use this implementation, please cite our paper as follows:
 
 ```
-@article{TODO
+@misc{liu2021hiermud,
+      title={HierMUD: Hierarchical Multi-task Unsupervised Domain Adaptation between Bridges for Drive-by Damage Diagnosis}, 
+      author={Jingxiao Liu and Susu Xu and Mario Bergés and Hae Young Noh},
+      year={2021},
+      eprint={2107.11435},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI}
 }
 ```
