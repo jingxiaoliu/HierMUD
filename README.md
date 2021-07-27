@@ -21,7 +21,7 @@ Note: the drive-by bridge health monitoring experiment involves data that is not
 ### Code Usage
 ```
 git clone https://github.com/jingxiaoliu/HierMUD.git
-cd multi-task-UDA
+cd HierUDA
 ```
 
 - Run the drive-by bridge health monitoring example with 
