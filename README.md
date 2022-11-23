@@ -23,11 +23,6 @@ Note: the drive-by bridge health monitoring experiment involves data that is not
 git clone https://github.com/jingxiaoliu/HierMUD.git
 cd HierMUD
 ```
-
-- Run the drive-by bridge health monitoring example with 
-```
-jupyter notebook demo_dbbhm.ipynb
-```
 - Run the digit recognition example with
 ```
 jupyter notebook demo_mnist.ipynb
